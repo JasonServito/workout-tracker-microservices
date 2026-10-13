@@ -1,0 +1,14 @@
+# Build output
+**/target/
+*.war
+
+# Environment and secrets
+.env
+
+# IDE / editor
+nb-configuration.xml
+nbproject/
+.idea/
+.vscode/
+*.swp
+.DS_Store

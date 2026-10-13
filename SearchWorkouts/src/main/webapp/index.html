@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Workouts</title>
+    <script>
+        function redirectToSearch(event) {
+            event.preventDefault(); // Prevent default form submission
+            const query = document.getElementById("query").value.trim();
+            if (query !== "") {
+                // Redirect to REST endpoint
+                window.location.href = `webresources/search/${encodeURIComponent(query)}`;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Search Workouts</h1>
+
+    <form onsubmit="redirectToSearch(event)">
+        <label for="query">Enter Date or User ID:</label>
+        <input type="text" id="query" name="query" required>
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>
